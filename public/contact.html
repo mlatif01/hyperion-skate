@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/4562bbca97.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Hyperion</title>
+  </head>
+  <body>
+    <nav class="navbar">
+      <a href="index.html">
+        <h1><i>HYPERION</i></h1>
+      </a>
+      <label for="toggle"><i class="fas fa-bars"></i></label>
+      <input type="checkbox" id="toggleNav" />
+      <div class="nav-links" id="navLinks">
+        <a href="about.html"><li>ABOUT</li></a>
+        <a href="#"><li>COLLECTION</li></a>
+        <a href="contact.html"><li>CONTACT</li></a>
+      </div>
+    </nav>
+
+    <div class="contact container">
+      <div style="text-align:center">
+        <h1 class="text-lg">Contact Us</h1>
+        <p style="margin-top: 1rem">Leave us a message:</p>
+      </div>
+      <div class="row">
+        <div class="column">
+          <img src="./img/kickflip.gif" />
+        </div>
+        <div class="column">
+          <form>
+            <label for="fname">First Name</label>
+            <input
+              type="text"
+              id="fname"
+              name="firstname"
+              placeholder="Your name.."
+            />
+            <label for="lname">Last Name</label>
+            <input
+              type="text"
+              id="lname"
+              name="lastname"
+              placeholder="Your last name.."
+            />
+            <label for="subject">Subject</label>
+            <textarea
+              id="subject"
+              name="subject"
+              placeholder="Write something.."
+              style="height:170px"
+            ></textarea>
+            <input type="submit" value="Submit" />
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <p>© Copyright HYPERION 2020</p>
+      <!-- <div>
+        Icons made by
+        <a href="https://www.flaticon.com/authors/freepik" title="Freepik"
+          >Freepik</a
+        >
+        from
+        <a href="https://www.flaticon.com/" title="Flaticon"
+          >www.flaticon.com</a
+        >
+      </div> -->
+    </footer>
+    <script src="script js"></script>
+  </body>
+</html>

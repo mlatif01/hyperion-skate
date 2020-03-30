@@ -1,0 +1,444 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-family: 'Roboto Condensed', sans-serif;
+  font-size: 100%;
+  /* font: inherit; */
+  vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+body {
+  line-height: 1;
+}
+ol,
+ul {
+  list-style: none;
+}
+blockquote,
+q {
+  quotes: none;
+}
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: '';
+  content: none;
+}
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+/* ---------------------------------------- */
+
+:root {
+  --primary-color: #2a9b76;
+  --secondary-color: #3edcee;
+  --tertiary-color: #d03018;
+  --dark-color: #6c6564;
+  --light-color: #e2e2e2;
+  --hover-color: #6c00ff;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+}
+body {
+  display: flex;
+  flex-direction: column;
+}
+.header-content,
+.about-content,
+.contact {
+  flex: 1 0 auto;
+}
+.footer {
+  flex-shrink: 0;
+}
+/* config */
+.lead {
+  font-size: 1.6rem;
+}
+
+.line {
+  border: 1px solid var(--light-color);
+  margin: 0 2rem;
+}
+
+.text-lg {
+  font-size: 2.4rem;
+}
+
+/* DEBUG Lines */
+* {
+  /* outline: solid 0.25rem hsla(210, 100%, 100%, 0.5); */
+}
+
+/* Navigation */
+.navbar {
+  position: relative;
+  background-color: var(--dark-color);
+  padding: 10px;
+  border-bottom: 8px solid var(--primary-color);
+}
+
+.navbar label {
+  font-size: 2rem;
+  position: absolute;
+  right: 18px;
+  top: 18px;
+  display: none;
+}
+
+.navbar #toggleNav {
+  position: absolute;
+  right: 20px;
+  top: 24px;
+  padding: 2rem;
+  transform: scale(2.5);
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+}
+
+@media only screen and (max-width: 560px) {
+  .navbar label {
+    display: block;
+    cursor: pointer;
+  }
+
+  .navbar .nav-links {
+    flex-direction: column;
+    width: 120vw;
+    top: 75px;
+    right: 1rem;
+    display: none;
+  }
+
+  .nav-links a {
+    border-bottom: 1px solid var(--light-color);
+    padding: 1rem;
+    background-color: var(--dark-color);
+    text-align: right;
+  }
+
+  #toggleNav:checked + .nav-links {
+    display: block;
+  }
+
+  #toggleNav:checked + .nav-links a {
+    display: block;
+  }
+}
+
+.navbar h1 {
+  color: var(--primary-color);
+  font-size: 3rem;
+}
+
+.navbar .fa-bars {
+  color: var(--light-color);
+}
+
+.navbar a {
+  position: relative;
+  left: 2rem;
+  text-decoration: none !important;
+  display: inline-block;
+}
+
+.navbar h1:hover {
+  color: var(--hover-color);
+}
+
+.navbar a:hover {
+  color: var(--primary-color);
+}
+
+.nav-links {
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+  position: absolute;
+  top: 40%;
+  right: 4rem;
+}
+
+.nav-links a {
+  text-decoration: none;
+  color: var(--light-color);
+  margin: 0 1rem;
+}
+
+/* Header Content */
+.header-content {
+  display: flex;
+  background: rgb(255, 255, 255);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.5550595238095238) 0%,
+    rgba(214, 214, 214, 1) 100%
+  );
+  justify-content: center;
+}
+
+.header-content h1 {
+  margin-top: 3rem;
+  color: var(--primary-color);
+  font-size: 3rem;
+  position: relative;
+  left: 2rem;
+  text-align: center;
+}
+
+.landing-image {
+  background-image: url('./img/kickflip.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  box-shadow: inset 30px 80px 80px 0 #000;
+  background-position: 50% 100%;
+  width: 2000px;
+  border-right: 4px solid var(--secondary-color);
+}
+
+.header-side {
+  margin: 4rem;
+}
+
+.header-side-images {
+  display: flex;
+  flex-direction: row;
+  margin-bottom: 3rem;
+}
+
+.header-side-images img {
+  width: 300px;
+  margin: 1rem;
+  margin: 2rem auto;
+  border-radius: 10px;
+}
+
+.header-side h2 {
+  margin: 2rem;
+  color: var(--dark-color);
+  text-align: center;
+}
+
+footer {
+  display: flex;
+  position: relative;
+  background-color: var(--dark-color);
+  padding: 1rem;
+  border-top: 2px solid var(--primary-color);
+  border-left: 100px;
+}
+
+footer p {
+  position: relative;
+  margin: 10px auto;
+  color: var(--primary-color);
+}
+
+/* About */
+.about-content h1 {
+  padding: 2rem;
+  text-align: center;
+  color: var(--primary-color);
+}
+
+.about-content h2 {
+  padding: 2rem;
+  text-align: center;
+}
+
+.about-images {
+  display: flex;
+  flex-direction: row;
+  margin-top: 3rem;
+  justify-content: center;
+  align-items: center;
+}
+
+.about-images img {
+  width: 300px;
+  border-radius: 10px;
+  margin: 0 2rem;
+}
+@media only screen and (max-width: 1000px) {
+  .about-images {
+    flex-direction: column;
+  }
+
+  .about-images img {
+    margin: 1rem 2rem;
+  }
+}
+
+/* Contact */
+.container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 10px;
+}
+
+.contact .column {
+  float: left;
+  width: 50%;
+  padding: 20px;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
+}
+
+.contact .column img {
+  border-radius: 10px;
+  width: 80%;
+  position: relative;
+  top: 1rem;
+}
+
+.contact h1 {
+  margin-top: 2rem;
+}
+
+.row:after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+input[type='text'],
+select,
+textarea {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type='submit'] {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type='submit']:hover {
+  background-color: var(--hover-color);
+}
+
+@media screen and (max-width: 600px) {
+  .column,
+  input[type='submit'] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
