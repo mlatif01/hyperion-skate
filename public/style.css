@@ -137,6 +137,7 @@ table {
   --dark-color: #6c6564;
   --light-color: #e2e2e2;
   --hover-color: #6c00ff;
+  --background-color: #f2f2f2;
 }
 
 * {
@@ -346,6 +347,10 @@ footer p {
 }
 
 /* About */
+.about-content {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
 .about-content h1 {
   padding: 2rem;
   text-align: center;
@@ -357,11 +362,25 @@ footer p {
   text-align: center;
 }
 
+.about-left {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.about-left video {
+  border-radius: 4px;
+  width: 80%;
+}
+
+.about-right {
+  margin-top: 4rem;
+}
+
 .about-images {
   display: flex;
   flex-flow: row wrap;
-  margin-top: 3rem;
-  justify-content: center;
+  margin: 2rem 0;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -372,9 +391,9 @@ footer p {
 }
 
 /* Contact */
-.container {
+.contact.container {
   border-radius: 5px;
-  background-color: #f2f2f2;
+  background-color: var(--background-color);
   padding: 10px;
 }
 
@@ -438,7 +457,63 @@ input[type='submit']:hover {
   background-color: var(--hover-color);
 }
 
+/* Collection */
+.collection-heading {
+  margin: 2rem 0;
+}
+.collection-heading h1 {
+  text-align: center;
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+.collection-heading p {
+  color: black;
+  text-align: center;
+}
+
+.collection .row {
+  display: grid;
+  grid-gap: 30px;
+  grid-template-columns: 1fr 1fr;
+}
+
+.collection-main-image {
+  padding: 20px;
+  border-right: 2px solid var(--light-color);
+  margin-top: 1rem;
+}
+.collection-images {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: center;
+  align-items: center;
+  grid-gap: 2rem;
+  padding: 2rem;
+}
+
+.collection-main-image img {
+  height: 100%;
+  width: 100%;
+}
+
+.collection-images img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.collection-images > * {
+  transition: transform 0.2s;
+}
+
+.collection-images > *:hover {
+  opacity: 0.8;
+  transform: scale(0.95);
+}
+
 @media screen and (max-width: 600px) {
+  .about-left {
+    margin-bottom: -3rem;
+  }
 }
 
 @media only screen and (max-width: 1000px) {
@@ -452,5 +527,16 @@ input[type='submit']:hover {
 
   .contact .row {
     flex-direction: column;
+  }
+
+  .about-content {
+    grid-template-columns: 1fr;
+  }
+
+  .collection .row {
+    background-color: var(--light-color);
+    display: grid;
+    grid-gap: 30px;
+    grid-template-columns: 1fr;
   }
 }
